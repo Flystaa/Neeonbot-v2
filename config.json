@@ -1,0 +1,7 @@
+{
+    "prefix": "!",
+    "token": "ihr-token",
+    "scopes": ["identify", "guilds", "bot", "webhook.incoming", "guilds.join"],
+    "CLIENT_ID": "ihre Client_ID",
+    "CLIENT_SECRET": "Ihr Client_Secret"
+}
