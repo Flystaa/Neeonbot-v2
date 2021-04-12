@@ -2,7 +2,12 @@ module.exports = {
 	name: 'serverinfo',
 	description: 'Serverinfo!',
 	cooldown: 5,
+	guildOnly: true,
 	execute(message, args) {
+			if (message.channel.type === 'dm') {
+				message.channel.send('Sie müssen diesen Befehl auf einem Server ausführen!')
+			}
+			else {
 			const Discord = require('discord.js');
 			const embed = new Discord.MessageEmbed()
 				.setColor("RANDOM")
@@ -51,5 +56,6 @@ module.exports = {
 				.setTimestamp();
 	
 			  message.channel.send(embed);
+				}
 	},
 };

@@ -8,7 +8,7 @@ module.exports = {
         }
     
         const avatarList = message.mentions.users.map(user => {
-            return `${user.username}'s Avatar: <${user.displayAvatarURL({ format: "png", dynamic: true })}>`;
+            return `${user.username}'s Avatar: <${user.displayAvatarURL({ format: "png", dynamic: true })}>, dies könnte ein geschütztes Bild sein. Neeon nimmt keine Haftung für kopierte Avatare!`;
         });
         message.channel.send(avatarList);
 	},

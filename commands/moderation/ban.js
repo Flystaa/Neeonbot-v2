@@ -7,7 +7,13 @@ module.exports = {
     name: 'ban',
     description: "Bannt einen Nutzer",
     cooldown: 5,
+    args: true,
+    usage: '<@Benutzer>',
     execute(message, args){
+        if (message.channel.type === 'dm') {
+            message.channel.send('Neeon Polizei hier! Sie müssen diesen Befehl auf einem Server ausführen!')
+        }
+        else {
         const sender = message.member
         const taggedUser = message.mentions.users.first();
         if (sender.hasPermission('BAN_MEMBERS')) {
@@ -22,5 +28,6 @@ module.exports = {
             else {
              message.channel.send(`Sie sind nicht berechtigt ${taggedUser.username} zu bannen!`)
          }
+        }
     }
 }
